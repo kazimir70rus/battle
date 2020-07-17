@@ -34,7 +34,9 @@
 </head>
 <body>
 
-<div align="center"><h2>Авторизация</h2>
+<!-- <div align="center"><h2>Добро пожаловать<br>на стихбатл<br><?=ucfirst($login->getValue())?></h2> -->
+
+<div align="center"><h2>Добро пожаловать<br>...</h2>
 
     <div class="container">
         <div class="item" style="border: 0px solid black">

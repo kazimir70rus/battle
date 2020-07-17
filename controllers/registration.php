@@ -26,11 +26,13 @@
                 } else {
                     $msg->setValue('Ошибка при добавлении пользователя');
                 } 
-                
+
             }
         } else {
             $msg->setValue('Пароль не совпадает');
         }
+    } else {
+//        $msg->setValue('Нет данных для регистрации');
     }
         
 require_once 'views/registration.php';

@@ -3,20 +3,21 @@
 
     <head>
         <meta charset="utf-8">
-        <title>Регистрация</title>
+        <title>Регистрация на стихбатл</title>
     </head>
 
     <body>
-        <h2>Регистрация</h2>
-        <div><a href="<?=BASE_URL?>">Вернуться</a></div>
-
+        <h2 align="center">Регистрация<br>на стихбатл</h2>
+        <div align="center"><a href="<?=BASE_URL?>">Вернуться</a></div>
+        <div align="center">
         <form method="post" action="">
-            Логин: <input id="login" type="text" name="login" /><br />
-            Пароль: <input id="pass" type="password" name="password" /><br />
-            Подтверждение: <input id="re_pass" type="password" name="password2" /><br />
-            <label><input id="no_xyz" type="checkbox" name="lic" value="ok" />Принимаю правила игры <br /></label><br />
+            Логин:<br><input id="login" type="text" name="login"><br>
+            Пароль:<br><input id="pass" type="password" name="password"><br>
+            Подтверждение:<br><input id="re_pass" type="password" name="password2"><br>
+            <label><input id="no_xyz" type="checkbox" name="lic" value="ok">Принимаю правила игры <br></label><br>
             <input type="submit" name="GO" value="Регистрация">
         </form>
+        </div>
         <div><?=$msg->popValue()?></div>
     </body>
 

@@ -19,6 +19,8 @@ session_start();
 
 $db = new \battle\module\Db($config);
 $msg = new \battle\module\SessionVar(UID . 'msg');
+$login = new \battle\module\SessionVar(UID . 'login');
+
 
 if (isset($_GET['url'])) {
     $param = explode('/', $_GET['url']);

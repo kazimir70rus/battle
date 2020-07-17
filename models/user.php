@@ -10,9 +10,7 @@ Class User
     function __construct($db)
     {
         $this->db = $db;
-
     }
-
 
     function add($login, $password)
     {
@@ -23,7 +21,6 @@ Class User
                     ->insertData($query, ['login' => $login, 'password' => $password]);
     }
 
-
     function getInfo($id_user)
     {
         $query = 'select name from users where id_user = :id_user';
@@ -32,7 +29,6 @@ Class User
                     ->db
                     ->getRow($query, ['id_user' => $id_user]);
     }
-
 
     function check($login, $pass)
     {
@@ -43,7 +39,6 @@ Class User
                     ->getRow($query, ['login' => $login, 'pass' => $pass]);
     }
 
-
     function getList()
     {
         $query ='select id_user, name from users order by name';
@@ -53,4 +48,12 @@ Class User
                     ->getList($query);
     }
 
+    function getUser($login, $password)
+    {
+        $query = 'select login from users where login = :login and password = :password limit 1';
+
+        return $this
+                    ->db
+                    ->getRow($query, ['login' => $login, 'password' => $password]);  //
+    }    
 }
